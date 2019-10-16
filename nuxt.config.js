@@ -128,7 +128,7 @@ export default {
   ** Extend routes so multiple routes can use same component
   */
   router: {
-    extendRoutes(routes, resolve) {
+    extendRoutes (routes, resolve) {
       routes.push({
         name: 'PostIndex',
         path: '/page/:pageNumber',
@@ -161,7 +161,7 @@ export default {
     //     }
     //   }
     // },
-    extend(config, ctx) {
+    extend (config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
