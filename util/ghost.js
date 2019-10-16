@@ -27,7 +27,7 @@ const postIndexFields = [
 
 const generateRoutes = async () => {
   // need to use env set in .env file or set on you server since this is called during nuxt config
-  // cannot use process.eng.ghostUri which is available after config
+  // cannot use process.env.ghostUri which is available after config
   const host = process.env.GHOST_URI
   const key = process.env.GHOST_KEY
 
@@ -106,7 +106,7 @@ const generateRoutes = async () => {
   */
   const pages = await api.pages.browse({
     limit: 'all',
-    inlcude: 'authors,tags'
+    include: 'authors,tags'
   })
 
   pages.forEach((page) => {
