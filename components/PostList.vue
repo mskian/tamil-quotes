@@ -76,14 +76,14 @@ export default {
     }
   },
   computed: {
-    prevLink() {
+    prevLink () {
       if (this.pagination.prev === 1) {
         return this.indexBase
       } else {
         return this.indexBase + 'page/' + this.pagination.prev
       }
     },
-    nextLink() {
+    nextLink () {
       return this.indexBase + 'page/' + this.pagination.next
     }
   }

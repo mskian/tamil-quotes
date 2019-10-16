@@ -3,7 +3,9 @@ import GhostContentAPI from '@tryghost/content-api'
 // we have this function accept variables to be accessible to config.js
 const ghost = (url, key) => {
   return new GhostContentAPI({
+    // eslint-disable-next-line object-shorthand
     url: url,
+    // eslint-disable-next-line object-shorthand
     key: key,
     version: 'v2'
   })

@@ -17,14 +17,14 @@ import { ghostAPI } from '@/util/ghost'
 export default {
   name: 'PostPage',
   computed: {
-    post() {
+    post () {
       return this.$store.state.currentPost
     },
-    siteSettings() {
+    siteSettings () {
       return this.$store.state.siteSettings
     }
   },
-  head() {
+  head () {
     return {
       title: this.post.title,
       meta: [
@@ -44,7 +44,7 @@ export default {
       ]
     }
   },
-  async fetch({ params, store, error, payload }) {
+  async fetch ({ params, store, error, payload }) {
     if (payload) {
       store.commit('setCurrentPost', payload)
     } else {
@@ -84,7 +84,7 @@ export default {
       }
     }
   },
-  mounted() {
+  mounted () {
     // ghetto way of overcoming iFrame height "challenge/annoyance"
     const cards = document.getElementsByClassName('kg-embed-card')
     for (const card of cards) {

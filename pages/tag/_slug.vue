@@ -17,20 +17,20 @@ export default {
     PostList
   },
   computed: {
-    indexPosts() {
+    indexPosts () {
       return this.$store.state.indexPosts
     },
-    indexPagination() {
+    indexPagination () {
       return this.$store.state.indexPagination
     },
-    siteSettings() {
+    siteSettings () {
       return this.$store.state.siteSettings
     },
-    currentTag() {
+    currentTag () {
       return this.$store.state.siteTags.find(tag => tag.slug === this.$route.params.slug)
     }
   },
-  async fetch({ params, store, error, payload }) {
+  async fetch ({ params, store, error, payload }) {
     if (payload) {
       store.commit('setIndexPosts', payload)
     } else {
@@ -43,6 +43,7 @@ export default {
         // remember to use await here so data will be available
         await store.dispatch('getIndexPosts', {
           filter: 'tag:' + params.slug,
+          // eslint-disable-next-line object-shorthand
           pageNumber: pageNumber
         })
       } catch (e) {

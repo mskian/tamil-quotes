@@ -15,7 +15,7 @@ export default {
     Footer,
     Navigation
   },
-  head() {
+  head () {
     return {
       meta: [
         { hid: 'twitter:site', name: 'twitter:site', content: this.siteSettings.twitter }
@@ -29,7 +29,7 @@ export default {
     }
   },
   computed: {
-    siteSettings() {
+    siteSettings () {
       return this.$store.state.siteSettings
     }
   }

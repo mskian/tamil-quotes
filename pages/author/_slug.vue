@@ -17,25 +17,26 @@ export default {
     PostList
   },
   computed: {
-    indexPosts() {
+    indexPosts () {
       return this.$store.state.indexPosts
     },
-    indexPagination() {
+    indexPagination () {
       return this.$store.state.indexPagination
     },
-    siteSettings() {
+    siteSettings () {
       return this.$store.state.siteSettings
     },
-    currentAuthor() {
+    currentAuthor () {
       return this.$store.state.siteAuthors.find(author => author.slug === this.$route.params.slug)
     }
   },
-  async fetch({ params, store, error, payload }) {
+  async fetch ({ params, store, error, payload }) {
     if (payload) {
       store.commit('setIndexPosts', payload)
     } else {
       let pageNumber = 1
       if (params.pageNumber) {
+        // eslint-disable-next-line object-shorthand
         pageNumber = params.pageNumber
       }
 
@@ -43,6 +44,7 @@ export default {
         // remember to use await here so data will be available
         await store.dispatch('getIndexPosts', {
           filter: 'author:' + params.slug,
+          // eslint-disable-next-line object-shorthand
           pageNumber: pageNumber
         })
       } catch (e) {

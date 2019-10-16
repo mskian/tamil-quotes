@@ -20,24 +20,24 @@ export default {
     PostList
   },
   computed: {
-    indexPosts() {
+    indexPosts () {
       return this.$store.state.indexPosts
     },
-    indexPagination() {
+    indexPagination () {
       return this.$store.state.indexPagination
     },
-    siteSettings() {
+    siteSettings () {
       return this.$store.state.siteSettings
     }
   },
-  head() {
+  head () {
     return {
       meta: [
         { hid: 'og:image', property: 'og:image', content: this.siteSettings.cover_image }
       ]
     }
   },
-  async fetch({ params, store, error, payload }) {
+  async fetch ({ params, store, error, payload }) {
     if (payload) {
       store.commit('setIndexPosts', payload)
     } else {
@@ -49,6 +49,7 @@ export default {
       try {
         await store.dispatch('getIndexPosts', {
           filter: '',
+          // eslint-disable-next-line object-shorthand
           pageNumber: pageNumber
         })
       } catch (e) {
