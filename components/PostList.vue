@@ -2,7 +2,7 @@
   <div>
     <div class="columns is-centered">
       <div class="column is-three-quarters">
-        <nuxt-link v-for="post in posts" :key="post.id" :to="'/' + post.slug" tag="div" class="card">
+        <div v-for="post in posts" :key="post.id" class="card">
           <div v-if="post.feature_image" class="card-image">
             <figure class="image">
               <img :src="post.feature_image" alt="Tamil Quotes">
@@ -41,7 +41,7 @@
               </div>
             </div>
           </div>
-        </nuxt-link>
+        </div>
         <div class="level is-mobile" role="navigation">
           <p v-if="pagination.prev" class="level-item has-text-centered">
             <nuxt-link :to="prevLink" class="button is-info">
@@ -97,7 +97,6 @@ export default {
 <style scoped>
   .card {
     margin: 1.5em 0 1.5em 0;
-    cursor: pointer;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
