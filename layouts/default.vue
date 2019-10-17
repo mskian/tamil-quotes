@@ -32,6 +32,25 @@ export default {
     siteSettings () {
       return this.$store.state.siteSettings
     }
+  },
+  mounted () {
+    const cookiesAllowed = localStorage.getItem('cookiesAllowed') === 'yes'
+    if (!cookiesAllowed) {
+      this.$toast.show('We use cookies', {
+        icon: 'info',
+        duration: 5000,
+        theme: 'bubble',
+        action: [
+          {
+            text: 'Dismiss',
+            onClick: (e, toastObject) => {
+              localStorage.setItem('cookiesAllowed', 'yes')
+              toastObject.goAway(0)
+            }
+          }
+        ]
+      })
+    }
   }
 }
 </script>

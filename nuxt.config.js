@@ -42,6 +42,7 @@ export default {
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
       {
         rel: 'shortcut icon',
         href: '/icons/Icon-48.png'
@@ -88,8 +89,7 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/main.scss',
-    '@mdi/font/css/materialdesignicons.min.css'
+    '@/assets/css/main.scss'
   ],
 
   /*
@@ -106,11 +106,16 @@ export default {
     // See https://goo.gl/OOhYW5
     ['@nuxtjs/pwa'],
     ['nuxt-purgecss'],
-    ['@nuxtjs/sitemap']
+    ['@nuxtjs/sitemap'],
+    ['@nuxtjs/toast']
   ],
+  toast: {
+    position: 'bottom-center',
+    duration: 2000,
+    theme: 'bubble'
+  },
   sitemap: {
-    hostname: 'https://quotes.tamilimages.xyz',
-    gzip: true
+    hostname: 'https://quotes.tamilimages.xyz'
   },
   manifest: {
     name: 'Tamil Quotes',
