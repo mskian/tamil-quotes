@@ -118,6 +118,18 @@ export default {
     dev: false,
     runtimeCaching: [
       {
+        urlPattern: 'https://app.tamilimages.xyz/content/images/.*',
+        handler: 'staleWhileRevalidate',
+        strategyOptions: {
+          cacheName: 'image-cache',
+          cacheExpiration: {
+            maxEntries: 30,
+            maxAgeSeconds: 300
+          },
+          cacheableResponse: { statuses: [0, 200] }
+        }
+      },
+      {
         urlPattern: 'https://fonts.googleapis.com/.*',
         handler: 'cacheFirst',
         method: 'GET',
