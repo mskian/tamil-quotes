@@ -105,8 +105,13 @@ export default {
   modules: [
     // See https://goo.gl/OOhYW5
     ['@nuxtjs/pwa'],
-    ['nuxt-purgecss']
+    ['nuxt-purgecss'],
+    ['@nuxtjs/sitemap']
   ],
+  sitemap: {
+    hostname: 'https://quotes.tamilimages.xyz',
+    gzip: true
+  },
   manifest: {
     name: 'Tamil Quotes',
     short_name: 'Tamil Quotes',
