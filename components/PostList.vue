@@ -26,7 +26,7 @@
               </p>
             </div>
             <div class="content">
-              <div class="subtitle is-6 has-text-centered post-tags">
+              <div class="subtitle is-6 has-text-centered">
                 <p>
                   Tagged at
                   <nuxt-link v-for="tag in post.tags" :key="tag.id" :to="'/tag/' + tag.slug">
