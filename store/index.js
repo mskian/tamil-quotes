@@ -71,7 +71,7 @@ export const actions = {
     const posts = await ghostAPI().posts.browse({
       limit: postsPerPage,
       page: pagination.pageNumber,
-      include: 'tags,authors',
+      include: 'tags,authors,primary_tag,primary_author',
       fields: postIndexFields,
       filter: pagination.filter
     })

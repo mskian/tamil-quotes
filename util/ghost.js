@@ -23,7 +23,7 @@ const postIndexFields = [
   'published_at',
   'updated_at',
   'primary_author',
-  'primary_tag',
+  'primary_tag'
 ]
 
 const generateRoutes = async () => {
