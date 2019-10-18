@@ -1,16 +1,16 @@
 <template>
-  <div>
+  <div itemtype="https://schema.org/CreativeWork" itemscope>
     <div class="columns is-centered">
       <div class="column is-three-quarters">
         <div v-for="post in posts" :key="post.id" class="card">
           <div v-if="post.feature_image" class="card-image">
             <figure class="image">
-              <img :src="post.feature_image" alt="Tamil Quotes">
+              <img :src="post.feature_image" alt="Tamil Quotes" itemprop="image">
             </figure>
           </div>
           <div class="card-content">
             <div class="content">
-              <h3 class="is-title has-text-centered">
+              <h3 class="is-title has-text-centered" itemprop="headline">
                 {{ post.title }}
               </h3>
               <p class="subtitle is-6 has-text-centered post-date">
