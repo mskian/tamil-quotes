@@ -1,2 +1,4 @@
 User-agent: * 
-Disallow: /
+Allow: /
+
+Sitemap: https://quotes.tamilimages.xyz/sitemap.xml

@@ -11,6 +11,8 @@ Nuxt.js Ghost Starter - <https://github.com/Maxbrain0/nuxt-ghost-starter>
 ## Features 🎨
 
 - SEO and Social Meta Tags
+- Schema Markup
+- Canonical URL
 - Sitemap
 - Tag page
 - Author page
