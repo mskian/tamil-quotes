@@ -3,12 +3,28 @@
     <div class="columns is-centered">
       <div class="column is-half">
         <div class="container post-container">
-          <h1 class="title has-text-weight-bold has-text-centered has-text-primary">
+          <h1 class="title has-text-weight-bold has-text-centered has-text-primary" itemprop="headline">
             {{ post.title }}
           </h1>
           <figure v-if="post.feature_image" class="post-feature-image">
             <img :src="post.feature_image" alt="Post Image">
           </figure>
+          <p class="has-text-centered post-date">
+            Published on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>&nbsp; by
+            <span
+              v-for="author in post.authors"
+              :key="author.id"
+              class="post-author has-text-centered"
+              itemtype="http://schema.org/Person"
+              itemscope="itemscope"
+              itemprop="author"
+            >
+              <nuxt-link :to="'/author/' + author.slug" rel="author" itemprop="url">
+                {{ post.primary_author.name }}
+              </nuxt-link>
+            </span>
+          </p>
+          <br>
           <article ref="postContent" class="content post-content" v-html="post.html" />
         </div>
       </div>
@@ -131,6 +147,24 @@ export default {
         width: 100%;
     }
   }
+  .post-date {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+.post-author {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+.post-tags {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
 .post-container {
   display: flex;
   flex-direction: column;
