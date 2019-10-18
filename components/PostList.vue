@@ -13,12 +13,12 @@
               <h3 class="is-title has-text-centered">
                 {{ post.title }}
               </h3>
-              <p class="subtitle is-6 has-text-centered">
-                Published on {{ post.updated_at | formatDate }}
+              <p class="subtitle is-6 has-text-centered post-date">
+                Published on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>
               </p>
             </div>
             <div v-for="author in post.authors" :key="author.id">
-              <p class="subtitle is-6 has-text-centered">
+              <p class="subtitle is-6 has-text-centered post-author">
                 Posted by 📝
                 <nuxt-link :to="'/author/' + author.slug">
                   {{ author.name }}
@@ -26,7 +26,7 @@
               </p>
             </div>
             <div class="content">
-              <div class="subtitle is-6 has-text-centered">
+              <div class="subtitle is-6 has-text-centered post-tags">
                 <p>
                   Tagged at
                   <nuxt-link v-for="tag in post.tags" :key="tag.id" :to="'/tag/' + tag.slug">
@@ -111,4 +111,22 @@ export default {
     font-weight: 600;
     font-size: 18px;
   }
+  .post-date {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+.post-author {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+.post-tags {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
 </style>

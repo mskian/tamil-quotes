@@ -2,9 +2,9 @@
   <section class="section">
     <div class="container">
       <h1 class="title is-3 has-text-centered">
-        Posts by the Author {{ currentAuthor.name }}
+        Posts by the Author: {{ currentAuthor.name }}
       </h1>
-      <p class="subtitle is-5 has-text-centered">
+      <p class="subtitle is-5 has-text-centered bio-author">
         Bio: {{ currentAuthor.bio }}
       </p>
       <PostList :posts="indexPosts" :pagination="indexPagination" :index-base="'/author/' + currentAuthor.slug + '/'" />
