@@ -1,8 +1,8 @@
 <template>
-  <div itemtype="https://schema.org/CreativeWork" itemscope>
+  <div>
     <div class="columns is-centered">
       <div class="column is-three-quarters">
-        <div v-for="post in posts" :key="post.id" class="card">
+        <div v-for="post in posts" :key="post.id" class="card" itemtype="https://schema.org/CreativeWork" itemscope>
           <div v-if="post.feature_image" class="card-image">
             <figure class="image">
               <img :src="post.feature_image" alt="Tamil Quotes" itemprop="image">
