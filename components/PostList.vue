@@ -14,24 +14,18 @@
                 {{ post.title }}
               </h3>
               <p class="subtitle is-6 has-text-centered post-date">
-                Published on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>
-              </p>
-            </div>
-            <div v-for="author in post.authors" :key="author.id">
-              <p class="subtitle is-6 has-text-centered post-author">
-                Posted by 📝
-                <nuxt-link :to="'/author/' + author.slug">
-                  {{ author.name }}
-                </nuxt-link>
+                Published on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>&nbsp; by
+                <span class="post-author has-text-centered" itemtype="http://schema.org/Person" itemscope="itemscope" itemprop="author">
+                  <a rel="author" itemprop="url" :href="'/author/' + post.primary_author.slug">
+                    {{ post.primary_author.name }}
+                  </a>
+                </span>
               </p>
             </div>
             <div class="content">
-              <div class="subtitle is-6 has-text-centered">
+              <div class="subtitle is-6 has-text-centered post-tags">
                 <p>
-                  Tagged at
-                  <nuxt-link v-for="tag in post.tags" :key="tag.id" :to="'/tag/' + tag.slug">
-                    {{ tag.name }}
-                  </nuxt-link>
+                  Tagged at <a :href="'/tag/' + post.primary_tag.slug">{{ post.primary_tag.name }}</a>
                 </p>
               </div>
               <div class="buttons is-centered">

@@ -21,6 +21,9 @@ const postIndexFields = [
   'feature_image',
   'featured',
   'published_at',
+  'updated_at',
+  'primary_author',
+  'primary_tag',
   'custom_excerpt',
   'excerpt' // excerpt doesn't seem to work in field definition (bug?)
 ]
@@ -57,7 +60,7 @@ const generateRoutes = async () => {
       limit: postsPerPage,
       page: nextPage,
       fields: postIndexFields,
-      include: 'authors,tags'
+      include: 'authors,tags,primary_tag,primary_author'
     })
     if (nextPage === 1) {
       // push first PER_PAGE posts info to index
@@ -79,7 +82,7 @@ const generateRoutes = async () => {
   // also append previous/next navigation
   const posts = await api.posts.browse({
     limit: 'all',
-    include: 'authors,tags'
+    include: 'authors,tags,primary_tag,primary_author'
   })
 
   // append next and previous slugs (for links in a post) to next and previous posts
@@ -106,7 +109,7 @@ const generateRoutes = async () => {
   */
   const pages = await api.pages.browse({
     limit: 'all',
-    include: 'authors,tags'
+    include: 'authors,tags,primary_tag,primary_author'
   })
 
   pages.forEach((page) => {
@@ -133,7 +136,7 @@ const generateRoutes = async () => {
       const posts = await api.posts.browse({
         limit: postsPerPage,
         page: nextPage,
-        inlcude: 'authors,tags',
+        include: 'authors,tags,primary_tag,primary_author',
         filter: `tag:${tag.slug}`
       })
       if (nextPage === 1) {
@@ -170,7 +173,7 @@ const generateRoutes = async () => {
       const posts = await api.posts.browse({
         limit: postsPerPage,
         page: nextPage,
-        inlcude: 'authors,tags',
+        include: 'authors,tags,primary_tag,primary_author',
         filter: `author:${author.slug}`
       })
       if (nextPage === 1) {
