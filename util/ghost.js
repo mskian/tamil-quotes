@@ -24,8 +24,6 @@ const postIndexFields = [
   'updated_at',
   'primary_author',
   'primary_tag',
-  'custom_excerpt',
-  'excerpt' // excerpt doesn't seem to work in field definition (bug?)
 ]
 
 const generateRoutes = async () => {
