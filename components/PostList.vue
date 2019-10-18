@@ -14,7 +14,7 @@
                 {{ post.title }}
               </h3>
               <p class="subtitle is-6 has-text-centered post-date">
-                Published on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>&nbsp; by
+                Updated on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>&nbsp; by
                 <span class="post-author has-text-centered" itemtype="http://schema.org/Person" itemscope="itemscope" itemprop="author">
                   <a rel="author" itemprop="url" :href="'/author/' + post.primary_author.slug">
                     {{ post.primary_author.name }}

@@ -10,7 +10,7 @@
             <img :src="post.feature_image" alt="Post Image" itemprop="image">
           </figure>
           <p class="has-text-centered post-date">
-            Published on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>&nbsp; by
+            Updated on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>&nbsp; by
             <span
               v-for="author in post.authors"
               :key="author.id"

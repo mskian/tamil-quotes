@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title is-1 has-text-centered">
+      <h1 class="title is-3 has-text-centered">
         {{ currentTag.name }}
       </h1>
       <PostList :posts="indexPosts" :pagination="indexPagination" :index-base="'/tag/' + currentTag.slug + '/'" />

@@ -4,7 +4,7 @@
       <h1 class="title is-3 has-text-centered">
         {{ siteSettings.title }}
       </h1>
-      <h2 class="subtitle has-text-centered">
+      <h2 class="subtitle has-text-centered bio-author">
         {{ siteSettings.description }}
       </h2>
       <PostList :posts="indexPosts" :pagination="indexPagination" />
