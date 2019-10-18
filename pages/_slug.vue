@@ -19,9 +19,9 @@
               itemscope="itemscope"
               itemprop="author"
             >
-              <nuxt-link :to="'/author/' + author.slug" rel="author" itemprop="url">
+              <a rel="author" itemprop="url" :href="'/author/' + post.primary_author.slug">
                 {{ post.primary_author.name }}
-              </nuxt-link>
+              </a>
             </span>
           </p>
           <br>
