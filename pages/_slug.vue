@@ -20,7 +20,7 @@
               itemprop="author"
             >
               <a rel="author" itemprop="url" :href="'/author/' + post.primary_author.slug">
-                {{ post.primary_author.name }}
+                <span itemprop="name">{{ post.primary_author.name }}</span>
               </a>
             </span>
           </p>
