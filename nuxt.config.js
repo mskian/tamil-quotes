@@ -99,7 +99,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~plugins/filters.js'
+    { src: '~/plugins/filters.js' },
+    { src: '~plugins/ga.js', ssr: false }
   ],
 
   /*
