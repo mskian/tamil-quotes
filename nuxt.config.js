@@ -132,7 +132,7 @@ export default {
     dev: false,
     runtimeCaching: [
       {
-        urlPattern: 'https://app.tamilimages.xyz/content/images/.*',
+        urlPattern: 'https://images.tamilquotes.xyz/content/images/.*',
         handler: 'staleWhileRevalidate',
         strategyOptions: {
           cacheName: 'image-cache',
