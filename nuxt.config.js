@@ -10,10 +10,6 @@ export default {
     siteUrl: 'https://tamilquotes.xyz'
   },
   head: {
-    // title: pkg.name,
-    bodyAttrs: {
-      itemtype: 'https://schema.org/Blog itemscope'
-    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no, minimal-ui' },
