@@ -22,6 +22,7 @@ export default {
         content: 'IE=edge, chrome=1'
       },
       { hid: 'description', name: 'description', content: pkg.description },
+      { name: 'google-site-verification', content: 'MB6fmsAtWxXiZBkMvNMHziNxqTCHWwPwZUfERaT0UQk' },
       {
         name: 'mobile-web-app-capable',
         content: 'yes'
