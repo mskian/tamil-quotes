@@ -13,6 +13,18 @@ $tablet: 768px; // include ipad
 $navbar-burger-color: $info;
 
 @import '~bulma';
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(45, 59, 255, 0.302);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(191, 18, 253, 0.5);
+}
 .navbar{
   background-color: #ffd900;
   margin-bottom: 30px;

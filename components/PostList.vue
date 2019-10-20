@@ -102,8 +102,14 @@ export default {
     margin-top: 1em;
   }
   .read-more {
+    display: flex;
+    flex-grow: 0.3;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 32px;
+    padding: 12px;
   }
   .post-date {
     font-size: 12px;
@@ -122,5 +128,8 @@ export default {
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
+}
+.level-item {
+  text-transform: uppercase;
 }
 </style>
