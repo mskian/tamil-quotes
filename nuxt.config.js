@@ -29,7 +29,7 @@ export default {
       },
       {
         name: 'application-name',
-        content: 'San Quotes'
+        content: 'Tamil Quotes'
       },
       {
         name: 'apple-mobile-web-app-capable',
@@ -41,7 +41,7 @@ export default {
       },
       {
         name: 'apple-mobile-web-app-title',
-        content: 'San Quotes'
+        content: 'Tamil Quotes'
       }
     ],
     link: [
