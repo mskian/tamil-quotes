@@ -1,5 +1,5 @@
 # Netlify redirects file, edit with your domain
 # https://www.netlify.com/docs/redirects/
 
-https://tamilquotes.netlify.com/* https://quotes.tamilimages.xyz/:splat 301!
-http://tamilquotes.netlify.com/* https://quotes.tamilimages.xyz/:splat 301!
+https://tamilquotes.netlify.com/* https://tamilquotes.xyz/:splat 301!
+http://tamilquotes.netlify.com/* https://tamilquotes.xyz/:splat 301!

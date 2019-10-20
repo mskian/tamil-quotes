@@ -1,4 +1,4 @@
 User-agent: * 
 Allow: /
 
-Sitemap: https://quotes.tamilimages.xyz/sitemap.xml
+Sitemap: https://tamilquotes.xyz/sitemap.xml

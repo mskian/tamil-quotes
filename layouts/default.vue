@@ -23,7 +23,7 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: 'https://quotes.tamilimages.xyz' + this.$route.path
+          href: 'https://tamilquotes.xyz' + this.$route.path
         }
       ]
     }

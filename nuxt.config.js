@@ -7,7 +7,7 @@ export default {
   env: {
     ghostUri: process.env.GHOST_URI,
     ghostKey: process.env.GHOST_KEY,
-    siteUrl: 'https://quotes.tamilimages.xyz'
+    siteUrl: 'https://tamilquotes.xyz'
   },
   head: {
     // title: pkg.name,
@@ -80,7 +80,7 @@ export default {
   ** Add overriding info for meta items
   */
   meta: {
-    name: 'Tamil Quotes' // this is needed to change title for all PWA meta tags
+    name: 'Tamil Quotes - Tamil SMS and Kavithai images' // this is needed to change title for all PWA meta tags
   },
 
   /*
@@ -119,7 +119,7 @@ export default {
     theme: 'bubble'
   },
   sitemap: {
-    hostname: 'https://quotes.tamilimages.xyz'
+    hostname: 'https://tamilquotes.xyz'
   },
   manifest: {
     name: 'Tamil Quotes',
