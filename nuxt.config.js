@@ -49,6 +49,7 @@ export default {
       },
       {
         rel: 'apple-touch-icon',
+        sizes: '48x48',
         href: '/icons/Icon-48.png'
       },
       {
