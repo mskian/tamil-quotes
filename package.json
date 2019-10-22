@@ -13,7 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.6.0",
+    "@nuxtjs/axios": "^5.7.1",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/sitemap": "^2.0.0",
@@ -23,7 +23,7 @@
     "cross-env": "^6.0.3",
     "express": "^4.17.1",
     "moment": "^2.24.0",
-    "nuxt": "^2.10.1",
+    "nuxt": "^2.10.2",
     "reframe.js": "^2.2.5"
   },
   "devDependencies": {
