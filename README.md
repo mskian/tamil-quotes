@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/182731b7-71de-4c7e-add3-a73907e60f34/deploy-status)](https://app.netlify.com/sites/tamilquotes/deploys) [![Build Status](https://travis-ci.org/mskian/tamil-quotes.svg?branch=master)](https://travis-ci.org/mskian/tamil-quotes) [![dependencies Status](https://david-dm.org/mskian/tamil-quotes/status.png)](https://david-dm.org/mskian/tamil-quotes)  
 
-Nuxt.js 🔥 + vue.js 🦄 + Ghost Content API 📦
+Nuxt.js 🔥 + vue.js 🦄 + Ghost Content API v3 📦
 
 ## Starter Pack 📦
 
@@ -21,8 +21,8 @@ Nuxt.js Ghost Starter - <https://github.com/Maxbrain0/nuxt-ghost-starter>
 - Offline Support
 - Mobile Responsive (Build using Bulma CSS Framework)
 - Eslint
-- Fetch Content from Ghost - <https://ghost.org/docs/api/v2/nuxtjs/>
-- Ghost Content API Client Library <https://ghost.org/docs/api/v2/javascript/content/>
+- Fetch Content from Ghost - <https://ghost.org/docs/api/v3/nuxtjs/>
+- Ghost Content API Client Library <https://ghost.org/docs/api/v3/javascript/content/>
 
 ## Usage 🔧
 
@@ -48,7 +48,7 @@ npm run generate
 
 ## Read Ghost Content 📖
 
-- Generate Ghost Content API - <https://ghost.org/docs/api/v2/content/#key>
+- Generate Ghost Content API - <https://ghost.org/docs/api/v3/content/#key>
 - create .env file Store the Ghost API Key and URL
 
 ```bash
