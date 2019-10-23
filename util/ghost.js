@@ -7,7 +7,7 @@ const ghost = (url, key) => {
     url: url,
     // eslint-disable-next-line object-shorthand
     key: key,
-    version: 'v2'
+    version: 'v3'
   })
 }
 
