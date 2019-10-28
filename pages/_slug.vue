@@ -173,7 +173,7 @@ export default {
     align-self: center;
     margin-bottom: 2em;
     img {
-      max-width: 85%;
+      max-width: 100%;
       display: block;
       margin: 0 auto;
     }
