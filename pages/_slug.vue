@@ -2,12 +2,12 @@
   <section class="section" itemtype="https://schema.org/CreativeWork" itemscope>
     <div class="columns is-centered">
       <div class="column is-half">
-        <div class="container post-container">
+        <div class="container post-container content">
           <h1 class="title has-text-weight-bold has-text-centered has-text-primary" itemprop="headline">
             {{ post.title }}
           </h1>
           <figure v-if="post.feature_image" class="post-feature-image">
-            <img :src="post.feature_image" alt="Post Image" itemprop="image">
+            <img :src="post.feature_image" :alt="post.title" itemprop="image">
           </figure>
           <p class="has-text-centered post-date">
             Updated on <time :datetime="post.updated_at | HTMLDate" itemprop="dateModified">{{ post.updated_at | formatDate }}</time>&nbsp; by
@@ -25,7 +25,7 @@
             </span>
           </p>
           <br>
-          <article ref="postContent" class="content post-content" itemprop="text" v-html="post.html" />
+          <article ref="postContent" class="post-content" itemprop="text" v-html="post.html" />
         </div>
       </div>
     </div>

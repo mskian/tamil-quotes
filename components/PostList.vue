@@ -5,7 +5,7 @@
         <div v-for="post in posts" :key="post.id" class="card" itemtype="https://schema.org/CreativeWork" itemscope>
           <div v-if="post.feature_image" class="card-image">
             <figure class="image">
-              <img :src="post.feature_image" alt="Tamil Quotes" itemprop="image">
+              <img :src="post.feature_image" :alt="post.title" itemprop="image">
             </figure>
           </div>
           <div class="card-content">

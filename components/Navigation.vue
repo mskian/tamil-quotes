@@ -2,7 +2,7 @@
   <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
     <div class="navbar-brand">
       <nuxt-link class="navbar-item" to="/">
-        <img :src="settings.logo" alt="Site Logo">
+        <img :src="settings.logo" :alt="settings.title">
       </nuxt-link>
       <a
         role="button"

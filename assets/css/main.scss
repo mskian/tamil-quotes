@@ -43,12 +43,19 @@ $navbar-burger-color: $info;
     background-color: #6a67ce;
   }
 }
-body{
+body {
   font-family: 'Catamaran', sans-serif;
   font-size: 16px;
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 700;
+  line-height: 1.618;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 h1,
 h2,
@@ -62,4 +69,19 @@ label {
   text-transform: uppercase;
   color: #292929;
   font-weight: bold;
+}
+.content {
+  margin-top: 1em;
+}
+.content h1 {
+  font-size:23px;
+}
+.content h2 {
+  font-size:20px;
+}
+.content h3 {
+  font-size:20px;
+}
+.content h4 {
+  font-size:18px;
 }
