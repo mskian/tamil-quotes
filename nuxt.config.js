@@ -48,6 +48,10 @@ export default {
         integrity: 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr',
         crossorigin: 'anonymous'
       },
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      { rel: 'dns-prefetch', href: 'https://use.fontawesome.com' },
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' },
+      { rel: 'preconnect', href: 'https://use.fontawesome.com' },
       {
         rel: 'shortcut icon',
         href: '/icons/Icon-48.png'
