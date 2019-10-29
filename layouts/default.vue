@@ -37,7 +37,8 @@ export default {
     const cookiesAllowed = localStorage.getItem('cookiesAllowed') === 'yes'
     if (!cookiesAllowed) {
       this.$toast.show('We use cookies', {
-        icon: 'info',
+        iconPack: 'fontawesome',
+        icon: 'bullhorn',
         duration: 5000,
         theme: 'toasted-primary',
         action: [
