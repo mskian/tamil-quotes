@@ -39,6 +39,7 @@ export default {
       this.$toast.show('We use cookies', {
         iconPack: 'fontawesome',
         icon: 'bullhorn',
+        position: 'bottom-center',
         duration: 5000,
         theme: 'toasted-primary',
         action: [

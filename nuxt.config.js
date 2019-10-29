@@ -120,11 +120,6 @@ export default {
     ['@nuxtjs/sitemap'],
     ['@nuxtjs/toast']
   ],
-  toast: {
-    position: 'bottom-center',
-    duration: 2000,
-    theme: 'bubble'
-  },
   sitemap: {
     hostname: 'https://tamilquotes.xyz'
   },
