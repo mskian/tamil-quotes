@@ -39,7 +39,7 @@ export default {
       this.$toast.show('We use cookies', {
         icon: 'info',
         duration: 5000,
-        theme: 'bubble',
+        theme: 'toasted-primary',
         action: [
           {
             text: 'Dismiss',
