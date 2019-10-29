@@ -41,12 +41,13 @@ export default {
       }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap', async: 'async' },
       {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.7.2/css/all.css',
         integrity: 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr',
-        crossorigin: 'anonymous'
+        crossorigin: 'anonymous',
+        async: 'async'
       },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
       { rel: 'dns-prefetch', href: 'https://use.fontawesome.com' },
