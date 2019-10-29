@@ -9,3 +9,4 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   X-Xss-Protection:	1; mode=block
+  Set-Cookie: HttpOnly; Secure; SameSite=Strict
