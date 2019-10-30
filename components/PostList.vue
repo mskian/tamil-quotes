@@ -36,10 +36,10 @@
             </div>
           </div>
         </div>
-        <div class="level is-mobile" role="navigation">
+        <div class="level" role="navigation" aria-label="pagination">
           <p v-if="pagination.prev" class="level-item has-text-centered">
             <nuxt-link :to="prevLink" class="button is-info is-rounded">
-              Prev
+              Previous
             </nuxt-link>
           </p>
           <p class="level-item has-text-centered">

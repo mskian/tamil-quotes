@@ -11,7 +11,7 @@ const ghost = (url, key) => {
   })
 }
 
-const postsPerPage = 5
+const postsPerPage = 3
 
 const postIndexFields = [
   'id',
