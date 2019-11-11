@@ -9,7 +9,6 @@
         <a href="https://twitter.com/tamilsmsblog" class="twittericon" title="Follow us on Twitter" target="_blank" rel="nofollow noopener"><i class="fab fa-twitter" /></a>
         <a href="https://www.facebook.com/tamilsmsblog" class="fbicon" title="Follow us on Facebook" target="_blank" rel="nofollow noopener"><i class="fab fa-facebook" /></a>
         <a href="https://www.instagram.com/tamilsms/" class="instagram" title="Tamil SMS on Instagram" target="_blank" rel="nofollow noopener"><i class="fab fa-instagram" /></a>
-        <a href="https://text.tamilsms.blog" class="emailicon" title="Subscribe" target="_blank" rel="nofollow noopener"><i class="fas fa-envelope" /></a>
       </P>
     </div>
   </footer>

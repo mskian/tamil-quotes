@@ -110,26 +110,43 @@ export default {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 32px;
     padding: 12px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
   }
   .post-date {
     font-size: 12px;
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
 }
 .post-author {
     font-size: 12px;
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
 }
 .post-tags {
     font-size: 12px;
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
 }
 .level-item {
-  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
 }
 </style>

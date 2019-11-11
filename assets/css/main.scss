@@ -48,7 +48,6 @@ body {
   font-size: 16px;
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.6);
-  font-weight: 700;
   line-height: 1.618;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: grayscale;
@@ -62,22 +61,29 @@ h2,
 h3,
 h4,
 label {
-  font-weight: 900;
+  font-weight: bold;
+}
+a {
+  color: rgb(73, 53, 253);
+}
+a:hover {
+color: #0f00df;
 }
 .bio-author {
+  line-height:30px;
   font-size: 14px;
-  text-transform: uppercase;
   color: #292929;
-  font-weight: bold;
 }
 .content {
   margin-top: 1em;
 }
 .content h1 {
-  font-size:23px;
+  font-size:21px;
+  font-weight: bold;
 }
 .content h2 {
   font-size:20px;
+  font-weight: bold;
 }
 .content h3 {
   font-size:20px;
@@ -113,6 +119,16 @@ label {
 .emailicon {
   color: #9a9a9a;
   font-size: 24px;
+}
+.site-bio {
+    letter-spacing: .03em;
+    word-wrap: break-word;
+    color: #6200ff;
+    border-bottom: 0.125em solid rgb(223, 152, 0);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
 }
 footer p {
   font-size: 16px;

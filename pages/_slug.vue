@@ -152,18 +152,30 @@ export default {
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-font-smoothing: antialiased !important;
+   text-rendering: optimizelegibility !important;
 }
 .post-author {
     font-size: 12px;
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-font-smoothing: antialiased !important;
+   text-rendering: optimizelegibility !important;
 }
 .post-tags {
     font-size: 12px;
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
+    -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-font-smoothing: antialiased !important;
+   text-rendering: optimizelegibility !important;
 }
 .post-container {
   display: flex;
@@ -182,12 +194,15 @@ export default {
 }
 
 .post-content {
-    line-height: 26px;
-    margin-bottom: 25px;
+    letter-spacing: .03em;
     word-wrap: break-word;
     font-family: 'Catamaran', sans-serif;
     font-size: 16px;
     color: #221f1f;
+    -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-font-smoothing: antialiased !important;
+   text-rendering: optimizelegibility !important;
 h2 {
   text-align: center;
 }
@@ -217,12 +232,15 @@ h2 {
     }
   }
   p {
-    line-height: 26px;
-    margin-bottom: 25px;
+    letter-spacing: .03em;
     word-wrap: break-word;
     font-family: 'Catamaran', sans-serif;
     font-size: 18px;
     color: #221f1f;
+    -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-font-smoothing: antialiased !important;
+   text-rendering: optimizelegibility !important;
   }
   p {
     align-self: center;

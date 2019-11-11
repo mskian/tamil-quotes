@@ -1,11 +1,14 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title is-3 has-text-centered">
+      <h1 class="title is-4 has-text-centered">
         {{ siteSettings.title }}
       </h1>
-      <h2 class="subtitle has-text-centered bio-author">
-        {{ siteSettings.description }}
+      <hr>
+      <h2 class="subtitle is-6 has-text-centered bio-author">
+        <span class="site-bio">
+          {{ siteSettings.description }}
+        </span>
       </h2>
       <PostList :posts="indexPosts" :pagination="indexPagination" />
     </div>
