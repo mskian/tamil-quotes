@@ -87,7 +87,7 @@ export default {
   ** Add overriding info for meta items
   */
   meta: {
-    name: 'Tamil Quotes - Tamil SMS and Kavithai images' // this is needed to change title for all PWA meta tags
+    name: 'Tamil Quotes - தமிழ் கோட்ஸ் and Kavithai images' // this is needed to change title for all PWA meta tags
   },
 
   /*
