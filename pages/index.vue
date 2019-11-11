@@ -19,24 +19,6 @@ export default {
   components: {
     PostList
   },
-  computed: {
-    indexPosts () {
-      return this.$store.state.indexPosts
-    },
-    indexPagination () {
-      return this.$store.state.indexPagination
-    },
-    siteSettings () {
-      return this.$store.state.siteSettings
-    }
-  },
-  head () {
-    return {
-      meta: [
-        { hid: 'og:image', property: 'og:image', content: this.siteSettings.cover_image }
-      ]
-    }
-  },
   async fetch ({ params, store, error, payload }) {
     if (payload) {
       store.commit('setIndexPosts', payload)
@@ -57,6 +39,24 @@ export default {
         error({ statusCode: 404, message: e.message })
       }
       // remember to use await here so data will be available
+    }
+  },
+  computed: {
+    indexPosts () {
+      return this.$store.state.indexPosts
+    },
+    indexPagination () {
+      return this.$store.state.indexPagination
+    },
+    siteSettings () {
+      return this.$store.state.siteSettings
+    }
+  },
+  head () {
+    return {
+      meta: [
+        { hid: 'og:image', property: 'og:image', content: this.siteSettings.cover_image }
+      ]
     }
   }
 }

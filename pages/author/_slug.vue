@@ -19,20 +19,6 @@ export default {
   components: {
     PostList
   },
-  computed: {
-    indexPosts () {
-      return this.$store.state.indexPosts
-    },
-    indexPagination () {
-      return this.$store.state.indexPagination
-    },
-    siteSettings () {
-      return this.$store.state.siteSettings
-    },
-    currentAuthor () {
-      return this.$store.state.siteAuthors.find(author => author.slug === this.$route.params.slug)
-    }
-  },
   async fetch ({ params, store, error, payload }) {
     if (payload) {
       store.commit('setIndexPosts', payload)
@@ -54,6 +40,20 @@ export default {
         // as far as user is concerned this isn't an API failure
         error({ statusCode: 404, message: e.message })
       }
+    }
+  },
+  computed: {
+    indexPosts () {
+      return this.$store.state.indexPosts
+    },
+    indexPagination () {
+      return this.$store.state.indexPagination
+    },
+    siteSettings () {
+      return this.$store.state.siteSettings
+    },
+    currentAuthor () {
+      return this.$store.state.siteAuthors.find(author => author.slug === this.$route.params.slug)
     }
   }
 }

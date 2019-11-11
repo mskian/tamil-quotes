@@ -15,19 +15,6 @@ export default {
     Footer,
     Navigation
   },
-  head () {
-    return {
-      meta: [
-        { hid: 'twitter:site', name: 'twitter:site', content: this.siteSettings.twitter }
-      ],
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://tamilquotes.xyz' + this.$route.path
-        }
-      ]
-    }
-  },
   computed: {
     siteSettings () {
       return this.$store.state.siteSettings
@@ -52,6 +39,19 @@ export default {
           }
         ]
       })
+    }
+  },
+  head () {
+    return {
+      meta: [
+        { hid: 'twitter:site', name: 'twitter:site', content: this.siteSettings.twitter }
+      ],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://tamilquotes.xyz' + this.$route.path
+        }
+      ]
     }
   }
 }
