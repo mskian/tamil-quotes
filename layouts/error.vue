@@ -1,7 +1,7 @@
 <template>
   <div class="error-container">
     <h1 v-if="error.statusCode === 404" class="title is-4 has-text-centered">
-      {{ error.statusCode }} - {{ error.message }}
+      {{ error.message }}
     </h1>
     <h1 v-else class="title is-1 has-text-centered">
       {{ error.statusCode }} - {{ error.message }}
