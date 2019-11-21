@@ -163,7 +163,7 @@ export default {
   * Generate dynamic routes for static site generations
   */
   generate: {
-    subFolders: false,
+    fallback: true,
     routes: generateRoutes
   },
   /*
