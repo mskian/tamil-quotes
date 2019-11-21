@@ -44,8 +44,8 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap' },
       {
         rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.7.2/css/all.css',
-        integrity: 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr',
+        href: 'https://use.fontawesome.com/releases/v5.11.2/css/all.css',
+        integrity: 'sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN',
         crossorigin: 'anonymous'
       },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
