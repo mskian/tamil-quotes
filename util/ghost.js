@@ -38,10 +38,6 @@ const generateRoutes = async () => {
   const routes = []
 
   /*
-  ** 404 page with access to site settings for navigation
-  */
-
-  /*
   *
   * Create post index pages (with only subset of post data)
   *
