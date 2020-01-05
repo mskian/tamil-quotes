@@ -13,7 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.9.0",
+    "@nuxtjs/axios": "^5.9.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/sitemap": "^2.0.1",
@@ -33,11 +33,11 @@
     "eslint-config-standard": "^14.1.0",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-jest": "^23.1.1",
+    "eslint-plugin-jest": "^23.3.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.0.1",
+    "eslint-plugin-vue": "^6.1.2",
     "node-sass": "^4.13.0",
     "nodemon": "^2.0.2",
     "nuxt-purgecss": "^0.2.1",
