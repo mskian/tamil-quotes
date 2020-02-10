@@ -27,7 +27,7 @@
     "reframe.js": "^2.2.7"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-config": "^2.0.2",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
