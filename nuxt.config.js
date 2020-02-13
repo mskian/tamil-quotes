@@ -142,7 +142,6 @@ export default {
   ],
   sitemap: {
     hostname: 'https://tamilquotes.xyz',
-    gzip: true,
     exclude: ['/404']
   },
   purgeCSS: {
