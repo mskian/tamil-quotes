@@ -11,29 +11,29 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setPostNav (state, postNav) {
+  setPostNav(state, postNav) {
     state.postNav = postNav
   },
-  setIndexPosts (state, indexPosts) {
+  setIndexPosts(state, indexPosts) {
     state.indexPosts = indexPosts
     state.indexPagination = indexPosts.meta.pagination
   },
-  setCurrentPost (state, currentPost) {
+  setCurrentPost(state, currentPost) {
     state.currentPost = currentPost
   },
-  setSiteSettings (state, siteSettings) {
+  setSiteSettings(state, siteSettings) {
     state.siteSettings = siteSettings
   },
-  setSiteTags (state, siteTags) {
+  setSiteTags(state, siteTags) {
     state.siteTags = siteTags
   },
-  setSiteAuthors (state, siteAuthors) {
+  setSiteAuthors(state, siteAuthors) {
     state.siteAuthors = siteAuthors
   }
 }
 
 export const actions = {
-  async nuxtServerInit ({ commit }, { error }) {
+  async nuxtServerInit({ commit }, { error }) {
     // get site settings, and whether or not posts have a previous or next post
     // use this for both static and universal apps
     try {
@@ -67,7 +67,7 @@ export const actions = {
       throw e
     }
   },
-  async getIndexPosts ({ commit }, pagination) {
+  async getIndexPosts({ commit }, pagination) {
     // set desired fields for index lists (and tags/authors indices)
     const posts = await ghostAPI().posts.browse({
       limit: postsPerPage,

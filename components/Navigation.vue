@@ -1,12 +1,18 @@
 <template>
-  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+  <nav
+    class="navbar is-transparent"
+    role="navigation"
+    aria-label="main navigation"
+    itemtype="https://schema.org/SiteNavigationElement"
+    itemscope
+  >
     <div class="navbar-brand">
       <nuxt-link class="navbar-item" to="/">
-        <img :src="settings.logo" :alt="settings.title">
+        <img :src="settings.logo" :alt="settings.title" />
       </nuxt-link>
       <a
         role="button"
-        :class="{'navbar-burger': true, 'is-active': mobileNavOpen}"
+        :class="{ 'navbar-burger': true, 'is-active': mobileNavOpen }"
         aria-label="menu"
         @click="mobileNavOpen = !mobileNavOpen"
       >
@@ -15,11 +21,8 @@
         <span aria-hidden="true" />
       </a>
     </div>
-    <div :class="{'navbar-menu': true, 'is-active': mobileNavOpen }">
-      <div
-        class="navbar-end"
-        @click="mobileNavOpen=false"
-      >
+    <div :class="{ 'navbar-menu': true, 'is-active': mobileNavOpen }">
+      <div class="navbar-end" @click="mobileNavOpen = false">
         <nuxt-link
           v-for="navItem in settings.navigation"
           :key="navItem.label"
@@ -41,7 +44,7 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
       mobileNavOpen: false
     }
@@ -50,11 +53,11 @@ export default {
 </script>
 
 <style scoped>
-  a.navbar-item {
-    font-weight: 700;
-  }
+a.navbar-item {
+  font-weight: 700;
+}
 
-  .navbar-menu {
-    padding-right: 1em;
-  }
+.navbar-menu {
+  padding-right: 1em;
+}
 </style>

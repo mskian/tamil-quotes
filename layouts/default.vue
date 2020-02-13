@@ -16,11 +16,11 @@ export default {
     Navigation
   },
   computed: {
-    siteSettings () {
+    siteSettings() {
       return this.$store.state.siteSettings
     }
   },
-  mounted () {
+  mounted() {
     const cookiesAllowed = localStorage.getItem('cookiesAllowed') === 'yes'
     if (!cookiesAllowed) {
       this.$toast.show('We use cookies', {
@@ -41,10 +41,14 @@ export default {
       })
     }
   },
-  head () {
+  head() {
     return {
       meta: [
-        { hid: 'twitter:site', name: 'twitter:site', content: this.siteSettings.twitter }
+        {
+          hid: 'twitter:site',
+          name: 'twitter:site',
+          content: this.siteSettings.twitter
+        }
       ],
       link: [
         {

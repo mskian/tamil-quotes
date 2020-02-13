@@ -4,7 +4,11 @@
       <h1 class="title is-3 has-text-centered">
         {{ currentTag.name }}
       </h1>
-      <PostList :posts="indexPosts" :pagination="indexPagination" :index-base="'/tag/' + currentTag.slug + '/'" />
+      <PostList
+        :posts="indexPosts"
+        :pagination="indexPagination"
+        :index-base="'/tag/' + currentTag.slug + '/'"
+      />
     </div>
   </section>
 </template>
@@ -16,7 +20,7 @@ export default {
   components: {
     PostList
   },
-  async fetch ({ params, store, error, payload }) {
+  async fetch({ params, store, error, payload }) {
     if (payload) {
       store.commit('setIndexPosts', payload)
     } else {
@@ -39,17 +43,19 @@ export default {
     }
   },
   computed: {
-    indexPosts () {
+    indexPosts() {
       return this.$store.state.indexPosts
     },
-    indexPagination () {
+    indexPagination() {
       return this.$store.state.indexPagination
     },
-    siteSettings () {
+    siteSettings() {
       return this.$store.state.siteSettings
     },
-    currentTag () {
-      return this.$store.state.siteTags.find(tag => tag.slug === this.$route.params.slug)
+    currentTag() {
+      return this.$store.state.siteTags.find(
+        (tag) => tag.slug === this.$route.params.slug
+      )
     }
   }
 }

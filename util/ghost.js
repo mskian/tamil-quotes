@@ -38,10 +38,10 @@ const generateRoutes = async () => {
   const routes = []
 
   /*
-  *
-  * Create post index pages (with only subset of post data)
-  *
-  **/
+   *
+   * Create post index pages (with only subset of post data)
+   *
+   **/
   let nextPage = 1
   do {
     const posts = await api.posts.browse({
@@ -93,8 +93,8 @@ const generateRoutes = async () => {
   })
 
   /*
-  ** get pages
-  */
+   ** get pages
+   */
   const pages = await api.pages.browse({
     limit: 'all',
     include: 'authors,tags,primary_tag,primary_author'
@@ -108,8 +108,8 @@ const generateRoutes = async () => {
   })
 
   /*
-  ** create tag index routes
-  */
+   ** create tag index routes
+   */
 
   const tags = await api.tags.browse({
     fields: 'name,slug,id',
@@ -145,8 +145,8 @@ const generateRoutes = async () => {
   }
 
   /*
-  ** create author index routes
-  */
+   ** create author index routes
+   */
 
   const authors = await api.authors.browse({
     fields: 'name,slug,id',
@@ -173,7 +173,8 @@ const generateRoutes = async () => {
         })
       } else {
         routes.push({
-          route: '/author/' + author.slug + '/page/' + posts.meta.pagination.page,
+          route:
+            '/author/' + author.slug + '/page/' + posts.meta.pagination.page,
           payload: posts
         })
       }

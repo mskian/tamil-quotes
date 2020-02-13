@@ -7,7 +7,11 @@
       <p class="subtitle is-5 has-text-centered bio-author">
         Bio: {{ currentAuthor.bio }}
       </p>
-      <PostList :posts="indexPosts" :pagination="indexPagination" :index-base="'/author/' + currentAuthor.slug + '/'" />
+      <PostList
+        :posts="indexPosts"
+        :pagination="indexPagination"
+        :index-base="'/author/' + currentAuthor.slug + '/'"
+      />
     </div>
   </section>
 </template>
@@ -19,7 +23,7 @@ export default {
   components: {
     PostList
   },
-  async fetch ({ params, store, error, payload }) {
+  async fetch({ params, store, error, payload }) {
     if (payload) {
       store.commit('setIndexPosts', payload)
     } else {
@@ -43,17 +47,19 @@ export default {
     }
   },
   computed: {
-    indexPosts () {
+    indexPosts() {
       return this.$store.state.indexPosts
     },
-    indexPagination () {
+    indexPagination() {
       return this.$store.state.indexPagination
     },
-    siteSettings () {
+    siteSettings() {
       return this.$store.state.siteSettings
     },
-    currentAuthor () {
-      return this.$store.state.siteAuthors.find(author => author.slug === this.$route.params.slug)
+    currentAuthor() {
+      return this.$store.state.siteAuthors.find(
+        (author) => author.slug === this.$route.params.slug
+      )
     }
   }
 }

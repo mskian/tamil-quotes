@@ -12,13 +12,20 @@ export default {
   head: {
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no, minimal-ui' },
+      {
+        name: 'viewport',
+        content:
+          'width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no, minimal-ui'
+      },
       {
         name: 'X-UA-Compatible',
         content: 'IE=edge, chrome=1'
       },
       { hid: 'description', name: 'description', content: pkg.description },
-      { name: 'google-site-verification', content: 'MB6fmsAtWxXiZBkMvNMHziNxqTCHWwPwZUfERaT0UQk' },
+      {
+        name: 'google-site-verification',
+        content: 'MB6fmsAtWxXiZBkMvNMHziNxqTCHWwPwZUfERaT0UQk'
+      },
       {
         name: 'mobile-web-app-capable',
         content: 'yes'
@@ -41,11 +48,16 @@ export default {
       }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap'
+      },
       {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.11.2/css/all.css',
-        integrity: 'sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN',
+        integrity:
+          'sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN',
         crossorigin: 'anonymous'
       },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
@@ -84,44 +96,65 @@ export default {
     ]
   },
   /*
-  ** Add overriding info for meta items
-  */
+   ** Add overriding info for meta items
+   */
   meta: {
     name: 'Tamil Quotes - தமிழ் கோட்ஸ் and Kavithai images' // this is needed to change title for all PWA meta tags
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#e84b0d' },
 
   /*
-  ** Global CSS
-  */
-  css: [
-    '@/assets/css/main.scss'
-  ],
+   ** Global CSS
+   */
+  css: ['@/assets/css/main.scss'],
 
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [
     { src: '~/plugins/filters.js' },
     { src: '~plugins/ga.js', ssr: false }
   ],
-
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js dev-modules
+   */
+  buildModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/stylelint-module
+    '@nuxtjs/stylelint-module'
+  ],
+  /*
+   ** Nuxt.js modules
+   */
   modules: [
-    // See https://goo.gl/OOhYW5
-    ['@nuxtjs/pwa'],
-    ['nuxt-purgecss'],
-    ['@nuxtjs/sitemap'],
-    ['@nuxtjs/toast']
+    // Doc: https://axios.nuxtjs.org/usage
+    // '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/toast',
+    'nuxt-purgecss',
+    '@nuxtjs/sitemap'
   ],
   sitemap: {
-    hostname: 'https://tamilquotes.xyz'
+    hostname: 'https://tamilquotes.xyz',
+    gzip: true,
+    exclude: ['/404']
+  },
+  purgeCSS: {
+    // configure purgecss
+    type: 'webpack'
+  },
+  eslint: {
+    // configure @nuxtjs/eslint-module
+    fix: true
+  },
+  stylelint: {
+    fix: true
   },
   manifest: {
     name: 'Tamil Quotes',
@@ -160,17 +193,17 @@ export default {
     ]
   },
   /*
-  * Generate dynamic routes for static site generations
-  */
+   * Generate dynamic routes for static site generations
+   */
   generate: {
     subFolders: false,
     routes: generateRoutes
   },
   /*
-  ** Extend routes so multiple routes can use same component
-  */
+   ** Extend routes so multiple routes can use same component
+   */
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         name: 'PostIndex',
         path: '/page/:pageNumber',
@@ -192,18 +225,18 @@ export default {
   },
   purgecss: {},
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     extractCSS: true,
-    // postcss: {
-    //   preset: {
-    //     features: {
-    //       customProperties: true
-    //     }
-    //   }
-    // },
-    extend (config, ctx) {
+    postcss: {
+      preset: {
+        features: {
+          customProperties: true
+        }
+      }
+    },
+    extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

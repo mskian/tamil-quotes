@@ -4,7 +4,7 @@
       <h1 class="title is-4 has-text-centered">
         {{ siteSettings.title }}
       </h1>
-      <hr>
+      <hr />
       <h2 class="subtitle is-6 has-text-centered bio-author">
         <span class="site-bio">
           {{ siteSettings.description }}
@@ -22,7 +22,7 @@ export default {
   components: {
     PostList
   },
-  async fetch ({ params, store, error, payload }) {
+  async fetch({ params, store, error, payload }) {
     if (payload) {
       store.commit('setIndexPosts', payload)
     } else {
@@ -45,20 +45,24 @@ export default {
     }
   },
   computed: {
-    indexPosts () {
+    indexPosts() {
       return this.$store.state.indexPosts
     },
-    indexPagination () {
+    indexPagination() {
       return this.$store.state.indexPagination
     },
-    siteSettings () {
+    siteSettings() {
       return this.$store.state.siteSettings
     }
   },
-  head () {
+  head() {
     return {
       meta: [
-        { hid: 'og:image', property: 'og:image', content: this.siteSettings.cover_image }
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.siteSettings.cover_image
+        }
       ]
     }
   }
